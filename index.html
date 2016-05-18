@@ -1,0 +1,2974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.4">
+<title>Welcome on developer.exoplatform.org!</title>
+<style>
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+script { display: none !important; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+meta.foundation-mq-small { font-family: "only screen and (min-width: 768px)"; width: 768px; }
+
+meta.foundation-mq-medium { font-family: "only screen and (min-width:1280px)"; width: 1280px; }
+
+meta.foundation-mq-large { font-family: "only screen and (min-width:1440px)"; width: 1440px; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { font-size: 100%; }
+
+body { background: white; color: #222222; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+
+a:hover { cursor: pointer; }
+
+img, object, embed { max-width: 100%; height: auto; }
+
+object, embed { height: 100%; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-center { text-align: center !important; }
+
+.text-justify { text-align: justify !important; }
+
+.hide { display: none; }
+
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+
+img { display: inline-block; vertical-align: middle; }
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }
+
+object, svg { display: inline-block; vertical-align: middle; }
+
+.center { margin-left: auto; margin-right: auto; }
+
+.spread { width: 100%; }
+
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+
+.subheader, .admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { line-height: 1.4; color: #79a7da; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+
+/* Default Link Styles */
+a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
+a:hover, a:focus { color: #2795b6; }
+a img { border: none; }
+
+/* Default paragraph styles */
+p { font-family: inherit; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; font-style: normal; color: #285a92; text-rendering: optimizeLegibility; margin-top: 1em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #79a7da; line-height: 0; }
+
+h1 { font-size: 2.125em; }
+
+h2 { font-size: 1.6875em; }
+
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+
+h4 { font-size: 1.125em; }
+
+h5 { font-size: 1.125em; }
+
+h6 { font-size: 1em; }
+
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+
+/* Helpful Typography Defaults */
+em, i { font-style: italic; line-height: inherit; }
+
+strong, b { font-weight: bold; line-height: inherit; }
+
+small { font-size: 60%; line-height: inherit; }
+
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #7f0a0c; }
+
+/* Lists */
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: outside; font-family: inherit; }
+
+ul, ol { margin-left: 1.5em; }
+ul.no-bullet, ol.no-bullet { margin-left: 1.5em; }
+
+/* Unordered Lists */
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+
+/* Ordered Lists */
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt { margin-bottom: 0.3125em; font-weight: bold; }
+dl dd { margin-bottom: 1.25em; }
+
+/* Abbreviations */
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222222; border-bottom: 1px dotted #dddddd; cursor: help; }
+
+abbr { text-transform: none; }
+
+/* Blockquotes */
+blockquote { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: 0.8125em; color: #518ccf; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #518ccf; }
+
+blockquote, blockquote p { line-height: 1.6; color: #79a7da; }
+
+/* Microformats */
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.6875em; }
+  h4 { font-size: 1.4375em; } }
+/* Tables */
+table { background: white; margin-bottom: 1.25em; border: solid 1px #dddddd; }
+table thead, table tfoot { background: whitesmoke; font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: #222222; text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: #222222; }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.4; }
+
+body { tab-size: 4; }
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+
+*:not(pre) > code { font-size: inherit; font-style: normal !important; letter-spacing: 0; padding: 0; line-height: inherit; }
+
+pre, pre > code { line-height: 1.4; color: black; font-family: monospace, serif; font-weight: normal; }
+
+.keyseq { color: #555555; }
+
+kbd { font-family: Consolas, "Liberation Mono", Courier, monospace; display: inline-block; color: #222222; font-size: 0.65em; line-height: 1.45; background-color: #f7f7f7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em white inset; margin: 0 0.15em; padding: 0.2em 0.5em; vertical-align: middle; position: relative; top: -0.1em; white-space: nowrap; }
+
+.keyseq kbd:first-child { margin-left: 0; }
+
+.keyseq kbd:last-child { margin-right: 0; }
+
+.menuseq, .menu { color: #090909; }
+
+b.button:before, b.button:after { position: relative; top: -1px; font-weight: normal; }
+
+b.button:before { content: "["; padding: 0 3px 0 2px; }
+
+b.button:after { content: "]"; padding: 0 2px 0 3px; }
+
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 0.9375em; padding-right: 0.9375em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+
+#content { margin-top: 1.25em; }
+
+#content:before { content: none; }
+
+#header > h1:first-child { color: black; margin-top: 2.25rem; margin-bottom: 0; padding-left: 3em ; background-image: url('images/exo-logo.png'); background-size: 120px ; background-repeat: no-repeat; background-position: 0 -0.8em}
+#header > h1:first-child + #toc { margin-top: 8px; border-top: 1px solid #dddddd; }
+#header > h1:only-child, body.toc2 #header > h1:nth-last-child(2) { border-bottom: 1px solid #dddddd; padding-bottom: 8px; }
+#header .details { border-bottom: 1px solid #dddddd; line-height: 1.45; padding-top: 0.25em; padding-bottom: 0.25em; padding-left: 0.25em; color: #518ccf; display: -ms-flexbox; display: -webkit-flex; display: flex; -ms-flex-flow: row wrap; -webkit-flex-flow: row wrap; flex-flow: row wrap; }
+#header .details span:first-child { margin-left: -0.125em; }
+#header .details span.email a { color: #79a7da; }
+#header .details br { display: none; }
+#header .details br + span:before { content: "\00a0\2013\00a0"; }
+#header .details br + span.author:before { content: "\00a0\22c5\00a0"; color: #79a7da; }
+#header .details br + span#revremark:before { content: "\00a0|\00a0"; }
+#header #revnumber { text-transform: capitalize; }
+#header #revnumber:after { content: "\00a0"; }
+
+#content > h1:first-child:not([class]) { color: black; border-bottom: 1px solid #dddddd; padding-bottom: 8px; margin-top: 0; padding-top: 1rem; margin-bottom: 1.25rem; }
+
+#toc { border-bottom: 1px solid #dddddd; padding-bottom: 0.5em; }
+#toc > ul { margin-left: 0.125em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin: 0.5em 0; }
+#toc ul { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; list-style-type: none; }
+#toc li { line-height: 1.3334; margin-top: 0.3334em; }
+#toc a { text-decoration: none; }
+#toc a:active { text-decoration: underline; }
+
+#toctitle { color: #79a7da; font-size: 1.2em; }
+
+@media only screen and (min-width: 768px) { #toctitle { font-size: 1.375em; }
+  body.toc2 { padding-left: 15em; padding-right: 0; }
+  #toc.toc2 { margin-top: 0 !important; background-color: #f2f2f2; position: fixed; width: 15em; left: 0; top: 0; border-right: 1px solid #dddddd; border-top-width: 0 !important; border-bottom-width: 0 !important; z-index: 1000; padding: 1.25em 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; margin-bottom: 0.8rem; font-size: 1.2em; }
+  #toc.toc2 > ul { font-size: 0.9em; margin-bottom: 0; }
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 15em; }
+  body.toc2.toc-right #toc.toc2 { border-right-width: 0; border-left: 1px solid #dddddd; left: auto; right: 0; } }
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; padding-right: 0; }
+  #toc.toc2 { width: 20em; }
+  #toc.toc2 #toctitle { font-size: 1.375em; }
+  #toc.toc2 > ul { font-size: 0.95em; }
+  #toc.toc2 ul ul { padding-left: 1.25em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; -webkit-border-radius: 0; border-radius: 0; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+
+#footer { max-width: 100%; background-color: #222222; padding: 1.25em; }
+
+#footer-text { color: #dddddd; line-height: 1.44; }
+
+.sect1 { padding-bottom: 0.625em; }
+
+@media only screen and (min-width: 768px) { .sect1 { padding-bottom: 1.25em; } }
+.sect1 + .sect1 { border-top: 1px solid #dddddd; }
+
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; z-index: 1001; width: 1.5ex; margin-left: -1.5ex; display: block; text-decoration: none !important; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: "\00A7"; font-size: 0.85em; display: block; padding-top: 0.1em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #285a92; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #234e7e; }
+
+.audioblock, .imageblock, .literalblock, .listingblock, .stemblock, .videoblock { margin-bottom: 1.25em; }
+
+.admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-rendering: optimizeLegibility; text-align: left; }
+
+table.tableblock > caption.title { white-space: nowrap; overflow: visible; max-width: 0; }
+
+.paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { color: black; }
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+
+.admonitionblock > table { border-collapse: separate; border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #dddddd; color: #518ccf; }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 0; border-radius: 0; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; -webkit-border-radius: 0; border-radius: 0; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock > .content > .title { color: #79a7da; margin-top: 0; }
+
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint { background: #eeeeee; }
+.sidebarblock .literalblock pre, .sidebarblock .listingblock pre:not(.highlight), .sidebarblock .listingblock pre[class="highlight"], .sidebarblock .listingblock pre[class^="highlight "], .sidebarblock .listingblock pre.CodeRay, .sidebarblock .listingblock pre.prettyprint { background: #f2f1f1; }
+
+.literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { border: 1px solid #cccccc; -webkit-border-radius: 0; border-radius: 0; word-wrap: break-word; font-size: 0.8125em; }
+.literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+@media only screen and (min-width: 768px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.90625em; } }
+@media only screen and (min-width: 1280px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 1em; } }
+
+.literalblock.output pre { color: #eeeeee; background-color: black; }
+
+.listingblock pre.highlightjs { padding: 0.8em; }
+.listingblock pre.highlightjs > code { padding: 0em; -webkit-border-radius: 0; border-radius: 0; }
+
+.listingblock > .content { position: relative; }
+
+.listingblock code[data-lang]:before { display: none; content: attr(data-lang); position: absolute; font-size: 0.75em; top: 0.425rem; right: 0.5rem; line-height: 1; text-transform: uppercase; color: #999; }
+
+.listingblock:hover code[data-lang]:before { display: block; }
+
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+
+.listingblock.terminal pre .command:not([data-prompt]):before { content: "$"; }
+
+table.pyhltable { border-collapse: separate; border: 0; margin-bottom: 0; background: none; }
+
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; line-height: 1.4; }
+
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+
+pre.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #dddddd; }
+
+pre.pygments .lineno { display: inline-block; margin-right: .25em; }
+
+table.pyhltable .linenodiv { background: none !important; padding-right: 0 !important; }
+
+.quoteblock { margin: 0 1em 1.25em 1.5em; display: table; }
+.quoteblock > .title { margin-left: -1.5em; margin-bottom: 0.75em; }
+.quoteblock blockquote, .quoteblock blockquote p { color: #79a7da; font-size: 1.15rem; line-height: 1.75; word-spacing: 0.1em; letter-spacing: 0; font-style: italic; text-align: justify; }
+.quoteblock blockquote { margin: 0; padding: 0; border: 0; }
+.quoteblock blockquote:before { content: "\201c"; float: left; font-size: 2.75em; font-weight: bold; line-height: 0.6em; margin-left: -0.6em; color: #79a7da; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: 0.5em; margin-right: 0.5ex; text-align: right; }
+.quoteblock .quoteblock { margin-left: 0; margin-right: 0; padding: 0.5em 0; border-left: 3px solid #518ccf; }
+.quoteblock .quoteblock blockquote { padding: 0 0 0 0.75em; }
+.quoteblock .quoteblock blockquote:before { display: none; }
+
+.verseblock { margin: 0 1em 1.25em 1em; }
+.verseblock pre { font-family: "Open Sans", "DejaVu Sans", sans; font-size: 1.15rem; color: #79a7da; font-weight: 300; text-rendering: optimizeLegibility; }
+.verseblock pre strong { font-weight: 400; }
+.verseblock .attribution { margin-top: 1.25rem; margin-left: 0.5ex; }
+
+.quoteblock .attribution, .verseblock .attribution { font-size: 0.8125em; line-height: 1.45; font-style: italic; }
+.quoteblock .attribution br, .verseblock .attribution br { display: none; }
+.quoteblock .attribution cite, .verseblock .attribution cite { display: block; letter-spacing: -0.025em; color: #518ccf; }
+
+.quoteblock.abstract { margin: 0 0 1.25em 0; display: block; }
+.quoteblock.abstract blockquote, .quoteblock.abstract blockquote p { text-align: left; word-spacing: 0; }
+.quoteblock.abstract blockquote:before, .quoteblock.abstract blockquote p:first-of-type:before { display: none; }
+
+table.tableblock { max-width: 100%; border-collapse: separate; }
+table.tableblock td > .paragraph:last-child p > p:last-child, table.tableblock th > p:last-child, table.tableblock td > p:last-child { margin-bottom: 0; }
+
+table.tableblock, th.tableblock, td.tableblock { border: 0 solid #dddddd; }
+
+table.grid-all th.tableblock, table.grid-all td.tableblock { border-width: 0 1px 1px 0; }
+
+table.grid-all tfoot > tr > th.tableblock, table.grid-all tfoot > tr > td.tableblock { border-width: 1px 1px 0 0; }
+
+table.grid-cols th.tableblock, table.grid-cols td.tableblock { border-width: 0 1px 0 0; }
+
+table.grid-all * > tr > .tableblock:last-child, table.grid-cols * > tr > .tableblock:last-child { border-right-width: 0; }
+
+table.grid-rows th.tableblock, table.grid-rows td.tableblock { border-width: 0 0 1px 0; }
+
+table.grid-all tbody > tr:last-child > th.tableblock, table.grid-all tbody > tr:last-child > td.tableblock, table.grid-all thead:last-child > tr > th.tableblock, table.grid-rows tbody > tr:last-child > th.tableblock, table.grid-rows tbody > tr:last-child > td.tableblock, table.grid-rows thead:last-child > tr > th.tableblock { border-bottom-width: 0; }
+
+table.grid-rows tfoot > tr > th.tableblock, table.grid-rows tfoot > tr > td.tableblock { border-width: 1px 0 0 0; }
+
+table.frame-all { border-width: 1px; }
+
+table.frame-sides { border-width: 0 1px; }
+
+table.frame-topbot { border-width: 1px 0; }
+
+th.halign-left, td.halign-left { text-align: left; }
+
+th.halign-right, td.halign-right { text-align: right; }
+
+th.halign-center, td.halign-center { text-align: center; }
+
+th.valign-top, td.valign-top { vertical-align: top; }
+
+th.valign-bottom, td.valign-bottom { vertical-align: bottom; }
+
+th.valign-middle, td.valign-middle { vertical-align: middle; }
+
+table thead th, table tfoot th { font-weight: bold; }
+
+tbody tr th { display: table-cell; line-height: 1.4; background: whitesmoke; }
+
+tbody tr th, tbody tr th p, tfoot tr th, tfoot tr th p { color: #222222; font-weight: bold; }
+
+p.tableblock > code:only-child { background: none; padding: 0; }
+
+p.tableblock { font-size: 1em; }
+
+td > div.verse { white-space: pre; }
+
+ol { margin-left: 1.75em; }
+
+ul li ol { margin-left: 1.5em; }
+
+dl dd { margin-left: 1.125em; }
+
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.625em; }
+
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+
+ul.checklist li > p:first-child > .fa-square-o:first-child, ul.checklist li > p:first-child > .fa-check-square-o:first-child { width: 1em; font-size: 0.85em; }
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { width: 1em; position: relative; top: 1px; }
+
+ul.inline { margin: 0 auto 0.625em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+
+ol.arabic { list-style-type: decimal; }
+
+ol.decimal { list-style-type: decimal-leading-zero; }
+
+ol.loweralpha { list-style-type: lower-alpha; }
+
+ol.upperalpha { list-style-type: upper-alpha; }
+
+ol.lowerroman { list-style-type: lower-roman; }
+
+ol.upperroman { list-style-type: upper-roman; }
+
+ol.lowergreek { list-style-type: lower-greek; }
+
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+
+td.hdlist1, td.hdlist2 { vertical-align: top; padding: 0 0.625em; }
+
+td.hdlist1 { font-weight: bold; padding-bottom: 1.25em; }
+
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+
+.colist > table tr > td:first-of-type { padding: 0 0.75em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+
+a.image { text-decoration: none; display: inline-block; }
+a.image object { pointer-events: none; }
+
+sup.footnote, sup.footnoteref { font-size: 0.875em; position: static; vertical-align: super; }
+sup.footnote a, sup.footnoteref a { text-decoration: none; }
+sup.footnote a:active, sup.footnoteref a:active { text-decoration: underline; }
+
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -0.25em 0 0.75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em 0 0.225em; line-height: 1.3334; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.05em; margin-bottom: 0.2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+
+.gist .file-data > table { border: 0; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+.big { font-size: larger; }
+
+.small { font-size: smaller; }
+
+.underline { text-decoration: underline; }
+
+.overline { text-decoration: overline; }
+
+.line-through { text-decoration: line-through; }
+
+.aqua { color: #00bfbf; }
+
+.aqua-background { background-color: #00fafa; }
+
+.black { color: black; }
+
+.black-background { background-color: black; }
+
+.blue { color: #0000bf; }
+
+.blue-background { background-color: #0000fa; }
+
+.fuchsia { color: #bf00bf; }
+
+.fuchsia-background { background-color: #fa00fa; }
+
+.gray { color: #606060; }
+
+.gray-background { background-color: #7d7d7d; }
+
+.green { color: #006000; }
+
+.green-background { background-color: #007d00; }
+
+.lime { color: #00bf00; }
+
+.lime-background { background-color: #00fa00; }
+
+.maroon { color: #600000; }
+
+.maroon-background { background-color: #7d0000; }
+
+.navy { color: #000060; }
+
+.navy-background { background-color: #00007d; }
+
+.olive { color: #606000; }
+
+.olive-background { background-color: #7d7d00; }
+
+.purple { color: #600060; }
+
+.purple-background { background-color: #7d007d; }
+
+.red { color: #bf0000; }
+
+.red-background { background-color: #fa0000; }
+
+.silver { color: #909090; }
+
+.silver-background { background-color: #bcbcbc; }
+
+.teal { color: #006060; }
+
+.teal-background { background-color: #007d7d; }
+
+.white { color: #bfbfbf; }
+
+.white-background { background-color: #fafafa; }
+
+.yellow { color: #bfbf00; }
+
+.yellow-background { background-color: #fafa00; }
+
+span.icon > .fa { cursor: default; }
+
+.admonitionblock td.icon [class^="fa icon-"] { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #207c98; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+
+.conum[data-value] { display: inline-block; color: #fff !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; font-size: 0.75em; width: 1.67em; height: 1.67em; line-height: 1.67em; font-family: "Open Sans", "DejaVu Sans", sans-serif; font-style: normal; font-weight: bold; }
+.conum[data-value] * { color: #fff !important; }
+.conum[data-value] + b { display: none; }
+.conum[data-value]:after { content: attr(data-value); }
+pre .conum[data-value] { position: relative; top: -0.125em; }
+
+b.conum * { color: inherit !important; }
+
+.conum:not([data-value]):empty { display: none; }
+
+#toctitle { color: #285a92; }
+
+.literalblock pre, .listingblock pre { background: #eeeeee; }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-right">
+<div id="header">
+<h1>Welcome on developer.exoplatform.org!</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#id-sources-management">1. Sources Management</a>
+<ul class="sectlevel2">
+<li><a href="#id-git-repositories">1.1. Git - Repositories</a>
+<ul class="sectlevel3">
+<li><a href="#id-platform-codebase">1.1.1. Platform codebase</a></li>
+</ul>
+</li>
+<li><a href="#id-git-settings">1.2. Git - Settings</a>
+<ul class="sectlevel3">
+<li><a href="#id-github">1.2.1. GitHub</a></li>
+<li><a href="#id-git-configuration">1.2.2. Git Configuration</a></li>
+<li><a href="#id-git-ides">1.2.3. Git &amp; IDEs</a></li>
+</ul>
+</li>
+<li><a href="#id-git-workflow">1.3. Git - Workflow</a>
+<ul class="sectlevel3">
+<li><a href="#id-repository-architecture">1.3.1. Repository architecture</a></li>
+<li><a href="#id-contribution-workflow">1.3.2. Contribution Workflow</a></li>
+<li><a href="#id-branching-model">1.3.3. Branching model</a></li>
+<li><a href="#id-feature-branch">1.3.4. Feature Branch</a></li>
+<li><a href="#id-fix-branch">1.3.5. Fix Branch</a></li>
+<li><a href="#id-stable-branch">1.3.6. Stable Branch</a></li>
+<li><a href="#id-integration-branch">1.3.7. Integration Branch</a></li>
+<li><a href="#id-poc-branch">1.3.8. PoC Branch</a></li>
+<li><a href="#id-release-process">1.3.9. Release Process</a></li>
+<li><a href="#id-community-contributions">1.3.10. Community Contributions</a></li>
+<li><a href="#id-improvement">1.3.11. Improvement</a></li>
+</ul>
+</li>
+<li><a href="#id-git-cheat-sheet">1.4. Git - Cheat Sheet</a>
+<ul class="sectlevel3">
+<li><a href="#id-features">1.4.1. Features</a></li>
+<li><a href="#id-sources">1.4.2. Sources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#id-ide-settings-to-work-on-exo-platform-projects">2. IDE Settings to work on eXo Platform projects</a>
+<ul class="sectlevel2">
+<li><a href="#id-eclipse-settings">2.1. Eclipse - Settings</a>
+<ul class="sectlevel3">
+<li><a href="#id-clean-up-settings">2.1.1. Clean Up Settings:</a></li>
+<li><a href="#id-code-templates-settings">2.1.2. Code Templates Settings:</a></li>
+<li><a href="#id-formatter-settings">2.1.3. Formatter Settings:</a></li>
+<li><a href="#id-organize-imports-settings">2.1.4. Organize Imports Settings:</a></li>
+</ul>
+</li>
+<li><a href="#id-intellij-settings">2.2. IntelliJ - Settings</a></li>
+</ul>
+</li>
+<li><a href="#id-build-management">3. Build Management</a>
+<ul class="sectlevel2">
+<li><a href="#id-maven-setup-guide">3.1. Maven - Setup guide</a>
+<ul class="sectlevel3">
+<li><a href="#id-prerequisites">3.1.1. Prerequisites</a></li>
+<li><a href="#id-install-apache-maven">3.1.2. Install Apache Maven</a></li>
+<li><a href="#id-configure-apache-maven">3.1.3. Configure Apache Maven</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This website is centralizing all resources useful for eXo developers and contributors.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<span class="icon"><i class="fa fa-file-pdf-o" title="eXo Developer PDF Version"></i></span>
+<a href="http://developer.exoplatform.org/exo-developer-guide.pdf">Download this documentation as PDF version</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="id-sources-management">1. Sources Management</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="id-git-repositories">1.1. Git - Repositories</h3>
+<div class="sect3">
+<h4 id="id-platform-codebase">1.1.1. Platform codebase</h4>
+<div class="paragraph">
+<p>eXo Platform is built from several projects stored in different Git repositories.
+You&#8217;ll find below the list of blessed (reference) repositories useful to build Platform 4</p>
+</div>
+<div id="plf_components" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/plf-components.png"><img src="images/plf-components.png" alt="Platform Components"></a>
+</div>
+<div class="title">Figure 1. Overview of all eXo Components for PLF 4.3</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.github.com/exoplatform/platform-public-distributions">platform-public-distributions</a>: Platform public distributions. Main project used to package the standalone community edition based on <a href="http://tomcat.apache.org">Apache Tomcat</a>.</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/platform">platform</a>: eXo Platform</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/integration">integration</a>: Integration of eXo services</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/calendar">calendar</a>: eXo Calendar</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/forum">forum</a>: eXo Forum</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/wiki">wiki</a>: eXo Wiki</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/social">social</a>: eXo Social</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/ecms">ecms</a>: eXo Content Management System</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/commons">commons</a>: Commons services</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/platform-ui">platform-ui</a>: UI customizations to overrride GateIn styles</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/gatein">GateIn Portal</a>: GateIn Portal</p>
+</li>
+<li>
+<p><a href="https://www.github.com/exoplatform/jcr">JCR</a>: eXo JCR</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="id-git-settings">1.2. Git - Settings</h3>
+<div class="sect3">
+<h4 id="id-github">1.2.1. GitHub</h4>
+<div class="paragraph">
+<p>GitHub is the platform we chose to host our Git repositories.
+<strong>To contribute to eXo projects you have to create a <a href="https://www.github.com/">GitHub</a> account.</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+For eXo employees it is recommended to create one with the same username as the one provided by the company (GoogleApp Id) when you joined us.
+<strong>You have to commit using your exoplatform.com email by setting it in your global git configuration or locally into each eXo repository clone</strong> (see below).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To retrieve your rights to push changes or to pull private repositories you have to register your github account into your profile in our internal IDM <a href="https://my.exoplatform.org">My eXo</a>.</p>
+</div>
+<div class="paragraph">
+<p>GitHub provides a lot of <a href="http://help.github.com/">documentation</a> and especially an installation/configuration guide for each operating system :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://help.github.com/linux-set-up-git/">Linux</a></p>
+</li>
+<li>
+<p><a href="http://help.github.com/win-set-up-git/">Windows</a></p>
+</li>
+<li>
+<p><a href="http://help.github.com/mac-set-up-git/">MacOS</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please follow these guides to setup your environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-git-configuration">1.2.2. Git Configuration</h4>
+<div class="paragraph">
+<p>It is recommended to create an SSH private key (with a password) and to use it to access to your Git(Hub) repositories (see Github guides above).</p>
+</div>
+<div class="paragraph">
+<p>By default you have at least to setup your default identity that will be used for all git instances on the system if you don&#8217;t override them locally.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git config --global user.name "John Doe"
+git config --global user.email "jdoe@exoplatform.com"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We recommend also :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to configure git to activate use colors if you terminal supports it :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git config color.ui true</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to configure git to push only the current branch by default to avoid to send to the server some changes in others branches you weren&#8217;t ready to share</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git config --global push.default current</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to setup line endings preferences for Unix/Mac users</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git config --global core.autocrlf input
+git config --global core.safecrlf true</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to setup line endings preferences for Windows users</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git config --global core.autocrlf true
+git config --global core.safecrlf true</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to reduce the number of files to consider when performing rename detection during a merge. The merge is working pretty well on small repositories (with move and rename of files). But it&#8217;s not working on large repositories as the detection of file renaming is O(n²), so we need to update some threshold (more explanations are available in this post : <a href="http://blogs.atlassian.com/2011/10/confluence_git_rename_merge_oh_my/">http://blogs.atlassian.com/2011/10/confluence_git_rename_merge_oh_my/</a>) :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell"> git config --global merge.renameLimit 10000</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to configure git to add some command aliases to easily call them with <code>git &lt;ALIAS_NAME&gt;</code>.
+You just add a section <code>[alias]</code> in your <code>~/.gitconfig</code> file with entries like bellow</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">[alias]
+
+[source]
+##### Basic aliases
+# Long status
+st = status
+# Short status
+s = status -s
+# Show all branches
+br = branch -a
+# Show branches with commit message
+sb = show-branch
+# Commit
+ci = commit
+# Checkout
+co = checkout
+# Show remote repositories
+r  = remote -v
+# Amend last commit
+amend = ci --amend
+# Removes files/directories from staging
+unadd = rm -r --cached
+
+##### Diff aliases
+# Diff and show commands with word-diff style
+wd = diff --word-diff
+ws = show --word-diff
+# Show diff before pull
+do = diff ORIG_HEAD HEAD
+# Show modified lines in the index
+staged = diff --cached
+# Show modified files
+changes= diff --name-status -r
+# Diff with statistics
+ds = diff --stat -r
+
+##### Log aliases
+# Show HEAD commit
+head = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative -n1
+# Short one line logs with ref-names
+l  = log --oneline --decorate=short
+# Shows the last git logentry (hash, author, date commitmessage)
+llm = log -1
+# Short one line logs with ref-names and statistics
+gl = log --oneline --decorate --stat --graph
+# Short one line logs with ref-names (yellow, date (green) and author (blue)
+glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative
+# Show last commit
+lc = log ORIG_HEAD.. --stat --no-merges
+# Graph log with full commit message
+glaaa = log --graph --abbrev-commit --date=relative
+
+##### Misc
+# Show last commiter
+whois = !sh -c 'git log -i -1 --pretty=\"format:%an &lt;%ae&gt;\n\" --author=\"$1\"' -
+# Show last commit message
+whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+# Hash of HEAD
+h = rev-list --max-count=1 HEAD
+# Show users which have commits in current branch
+ul = !git log --format='%aN' | sort -u
+# Number of commits in current branch
+c  = !git log --oneline | wc -l
+# Creates a tar.gz archive named after the last commits hash from HEAD! in the directory above the repository
+ahg = !git archive HEAD --format=tar | gzip &gt; ../`git h`.tar.gz
+# shows ignored directories
+ignored = !git ls-files --others -i --exclude-standard --directory
+# Move to the root of the repository
+root = !cd $(git rev-parse --show-cdup)
+# Show the root directory of the repository
+sroot = rev-parse --show-toplevel
+# Prune remote branches
+prune-all = !git remote | xargs -n 1 git remote prune
+# Show aliases
+aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+# Show upstream for the current branch
+upstream = !git for-each-ref --format='%(upstream:short)' `git symbolic-ref HEAD`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-git-ides">1.2.3. Git &amp; IDEs</h4>
+<div class="paragraph">
+<p>Git is natively supported by all IDE :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Eclipse : <a href="http://www.eclipse.org/egit/">EGit plugin</a> bundled by default in the major part of eclipse distributions.</p>
+</li>
+<li>
+<p>IntelliJ : <a href="http://www.jetbrains.com/idea/webhelp/using-git-integration.html">Native</a></p>
+</li>
+<li>
+<p>Netbeans : <a href="http://netbeans.org/projects/versioncontrol/pages/Git_main">Native since 7.1</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="id-git-workflow">1.3. Git - Workflow</h3>
+<div class="paragraph">
+<p>Our workflow is built on two principles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>repository architecture</strong> (development vs blessed) that has to be followed by <strong>all projects involved in products</strong> produced eXo (and thus that require to be supported).</p>
+</li>
+<li>
+<p>The <strong>branching model</strong> that has to be followed by <em>all projects</em> at eXo</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="id-repository-architecture">1.3.1. Repository architecture</h4>
+<div class="paragraph">
+<p>Aiming security and backup purpose, we are using two repository kinds (owned by two distinct github organizations).</p>
+</div>
+<div class="paragraph">
+<p>These are <code>blessed</code> and <code>development</code> repositories hosted respectively on <a href="https://github.com/exoplatform">exoplatform</a> and <a href="https://github.com/exodev">exodev</a> organizations.</p>
+</div>
+<div class="paragraph">
+<p>Development repositories are forked from blessed repositories.</p>
+</div>
+<div class="paragraph">
+<p><strong>This strategy is applied to all repositories/projects involved in eXo products.</strong> Others projects are using a single repository hosted on "exoplatform" organization.</p>
+</div>
+<div id="git_organization" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-organization.png"><img src="images/git-organization.png" alt="Git Organization" width="600"></a>
+</div>
+<div class="title">Figure 2. Git Repository Architecture</div>
+</div>
+<div class="sect4">
+<h5 id="id-development-repository">1.3.1.1. Development repository</h5>
+<div class="paragraph">
+<p>This repository is the developers repository. The main development branch is <code>develop</code> branch. Depending the contribution kind (one shot contribution or feature contribution), the developer can use a dedicated <code>feature</code> branch if needed.
+The most of development activity will be done in this repository by a lot of contributors :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>maintainers</code> (formerly known as <code>sl3</code>) : To develop fix. These developments are done in dedicated <code>fix</code> branches (more details below).</p>
+</li>
+<li>
+<p><code>all development teams</code> : To do one shot contribution and handle feature branch life cycle.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In this repository, <code>develop</code> branch and <code>feature</code> branch will be under CI.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-blessed-repository">1.3.1.2. Blessed repository</h5>
+<div class="paragraph">
+<p>In this repository you can find <code>stable</code> branches and release tags.
+Only some people are able to write on this repository :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>maintainers</code> : To integrate pull request on stable branches.</p>
+</li>
+<li>
+<p><code>release manager</code> : To perform release operations on stable (supported) branches.</p>
+</li>
+<li>
+<p><code>keepers</code> : Repository keepers are <code>Project Leader</code>, <code>Team Leader</code> and <code>Technical Leader</code>. They are able to pull changes from dev to blessed when the develop is stable enough and they can process releases for non supported versions of products (alpha, beta, RCs, …)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The continuous integration is applied on stables branches (<code>stable/1.0.x</code>, <code>stable/1.1.x</code>, etc) on blessed repository.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-contribution-workflow">1.3.2. Contribution Workflow</h4>
+<div class="paragraph">
+<p>The contribution workflow mainly relies on Github Pull Requests. Here are the rules :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>PR for everything</code><br>
+For every fix/feature, for all platform projects and supported addons, create a PR.
+Creating a PR is easy and allows to share, discuss on validate more easily the fix/feature.
+To create a PR :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>create a branch locally with your fix and push it to Github</p>
+</li>
+<li>
+<p>in Github, select your branch, and click on <strong>New pull request</strong> <span class="image"><img src="images/git-pr-create-01.png" alt="Git PR Create" width="700"></span></p>
+</li>
+<li>
+<p>select the right base branch (most of the time <strong>develop</strong>) and check that the PR contains only your commits <span class="image"><img src="images/git-pr-create-02.png" alt="Git PR Create" width="700"></span></p>
+</li>
+<li>
+<p>fill the description</p>
+</li>
+<li>
+<p>click on <strong>Create pull request</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>PR on develop</code><br>
+
+PR must always be done on exodev:develop or exo-addons:develop, not on exoplatform:develop (we fix on develop first, then we backport to stable if needed).
+Remember that exoplatform:develop is read-only.
+There are only 2 exceptions :
+</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the fix is different between develop dans stable - in such a case, 2 PRs are necessary, one on develop, one on stable</p>
+</li>
+<li>
+<p>the bug only occurs on stable - in such a case, PR must be done on stable</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Explain your PR</code></p>
+<div class="paragraph">
+<p>The description of the PR must always be filled to describe precisely what was the root cause of the problem and how it has been solved.</p>
+</div>
+</li>
+<li>
+<p><code>Update the PR, do not recreate it</code></p>
+<div class="paragraph">
+<p>To update a PR, just push a new commit in the same branch, no need to create a new branch and a new PR.
+Creating a new PR for each update prevents from following easily the discussion and the updates history.</p>
+</div>
+</li>
+<li>
+<p><code>PR must be validated by peers</code></p>
+<div class="paragraph">
+<p>When a PR is submitted, it has to be reviewed by at least one peer.
+When the PR is validated by the peer, the PR can be merged in the target branch.</p>
+</div>
+</li>
+<li>
+<p><code>Merge the PR correctly</code></p>
+<div class="paragraph">
+<p>Before merging the PR in the target branch, make sure the branch of the PR is up to date (push --force), otherwise the PR will not appear as <strong>Merged</strong> in Github.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/git-pr-merged.png" alt="Git PR Merged" width="700">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Clean your mess</code></p>
+<div class="paragraph">
+<p>Once the PR has been merged, delete the branch in Github, and close the PR if it is not already marked as <strong>Merged</strong> or <strong>Closed</strong>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<code>Code Review does NOT mean Test, Reviewers are NOT Testers</code><br>
+The role of the reviewers is to review the code changes (code best practices, better/easier solution, &#8230;&#8203;).
+They do not necessarily have to test (they can if they want/need of course).
+The author of the PR must not rely on the reviewers to test it, he/she is responsible for that (and the QA people will help during their test campaigns).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-branching-model">1.3.3. Branching model</h4>
+<div class="paragraph">
+<p>Branching model are 6 kinds of branch :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>develop</code> : Develop branch contains the latest delivered development changes.</p>
+</li>
+<li>
+<p><code>feature/xxx</code> : Feature branches are dedicated branch for one big feature (lot of commits), "xxx" is the feature name.</p>
+</li>
+<li>
+<p><code>stable/xxx</code> : Stable branch are used to perform releases and write / accept fix. "xxx" is the stable version name (e.g 1.0.x).</p>
+</li>
+<li>
+<p><code>fix/xxx</code> : Fix branch is dedicated to integrate bugfix on Develop branch. If needed the fix is then cherry pick on stable branch.</p>
+</li>
+<li>
+<p><code>integration/xxx</code> : Integration branches are dedicated branch to automatic integration task (like Crowdin translation).</p>
+</li>
+<li>
+<p><code>poc/xxx</code> : Poc branches are dedicated branch to develop a Prove of Concept (PoC).</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="id-develop-branch">1.3.3.1. Develop Branch</h5>
+<div class="paragraph">
+<p>Develop branch contains the latest delivered development changes.
+This is our backbone where all the different fix and new feature are mixed with each other.</p>
+</div>
+<div id="git-workflow-develop-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-develop-branch.png"><img src="images/git-workflow-develop-branch.png" alt="Git Workflow - Develop Branch" width="600"></a>
+</div>
+<div class="title">Figure 3. Git Workflow - Develop Branch</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-feature-branch">1.3.4. Feature Branch</h4>
+<div class="paragraph">
+<p>Feature branches are dedicated branch to develop a new feature.</p>
+</div>
+<div id="git-workflow-feature-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-feature-branch.png"><img src="images/git-workflow-feature-branch.png" alt="Git Workflow - Feature Branch" width="300"></a>
+</div>
+<div class="title">Figure 4. Git Workflow - Feature Branch</div>
+</div>
+<div class="sect4">
+<h5 id="id-actions">1.3.4.1. Actions</h5>
+<div class="sect5">
+<h6 id="id-create-a-new-feature-branch">Create a new Feature Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> A new feature is specified and planified.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> PL/TL</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you want the branch deploy on Acceptance, do not create the branch by yourself but create a SWF ticket on Jira for the full package (Branches+CI+Acceptance).</p>
+</li>
+<li>
+<p>If it’s a local feature project without need for CI or Acceptance you can create it by yourself.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-rebase-develop-to-feature-branch">Rebase Develop to Feature Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> Frequently</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Team responsible of the branch with support of team responsible each project.</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout develop
+git pull
+git checkout feature/x
+git rebase develop
+git push --force</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-merge-feature-branch-to-develop">Merge Feature Branch to Develop</h6>
+<div class="paragraph">
+<p><strong>When:</strong> Feature has been successfully tested by FQA. VPs give a GO.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Team responsible of the branch with support of team responsible of each project</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout feature/x
+git rebase -i origin/develop
+(remove initial commit)
+git checkout develop
+git pull
+git merge --no-ff feature/x
+git push</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-remove-a-feature-branch">Remove a Feature Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> Just after the merge of the feature branch to Develop</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> PL/TL</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong> Create SWF ticket on Jira to remove the full package (Branches+CI+Acceptance).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-fix-branch">1.3.5. Fix Branch</h4>
+<div class="paragraph">
+<p>Fix Branch are dedicated branch to fix a bug. The validation process may be different if the bug has been raised by FQA/TQA or by SM.</p>
+</div>
+<div class="paragraph">
+<p>A fix branch is always created from Develop branch (except exceptional circumstance: fix on stable only).</p>
+</div>
+<div id="git-workflow-fix-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-fix-branch.png"><img src="images/git-workflow-fix-branch.png" alt="Git Workflow - Fix Branch" width="400"></a>
+</div>
+<div class="title">Figure 5. Git Workflow - Fix Branch</div>
+</div>
+<div class="sect4">
+<h5 id="id-actions-2">1.3.5.1. Actions</h5>
+<div class="sect5">
+<h6 id="id-create-a-fix-branch">Create a Fix Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> A Jira issue has been created, time to resolve it is already estimated.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Team responsible to fix the issue.</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout develop
+git pull
+git checkout -b fix/issue
+git push</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-merge-a-fix-branch-to-develop">Merge a Fix Branch to Develop</h6>
+<div class="paragraph">
+<p><strong>When:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If issue raised by TQA/FQA: After Engineering test</p>
+</li>
+<li>
+<p>If issue raised by SM: After SM test</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If issue raised by TQA/FQA: Team responsible to fix the issue</p>
+</li>
+<li>
+<p>If issue raised by SM: SM</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout fix/issue
+git pull
+git rebase origin/develop
+git checkout develop
+git pull
+git merge fix/issue --squash
+git commit -a
+git push</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-remove-a-fix-branch">Remove a Fix Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> After the merge of the fix branch to Develop</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Team responsible to fix the issue.</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git push origin --delete fix/issue
+git branch -d fix/issue</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-stable-branch">1.3.6. Stable Branch</h4>
+<div class="paragraph">
+<p>Stable branch are used to perform releases and write / accept fix.</p>
+</div>
+<div id="git-workflow-stable-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-stable-branch.png"><img src="images/git-workflow-stable-branch.png" alt="Git Workflow - Stable Branch" width="600"></a>
+</div>
+<div class="title">Figure 6. Git Workflow - Stable Branch</div>
+</div>
+<div class="sect4">
+<h5 id="id-actions-3">1.3.6.1. Actions</h5>
+<div class="sect5">
+<h6 id="id-create-a-new-stable-branch">Create a new Stable Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> When create the first Release Candidate version</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> SWF</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong> With a script similar to [createFB.sh](<a href="https://github.com/exoplatform/swf-scripts/blob/master/createFB.sh" class="bare">github.com/exoplatform/swf-scripts/blob/master/createFB.sh</a>)</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-create-a-fix-branch-to-fix-stable-branch">Create a Fix Branch to fix Stable Branch</h6>
+<div class="paragraph">
+<p><strong>In exceptional circumstance</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>When:</strong> A fix need to be done on a specific version but not on the on development version (fix a performance issue for instance)</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Team responsible to fix the issue after a Go from SM.</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout stable/4.1.x
+git pull
+git checkout -b fix/4.1.x-issue</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-merge-a-fix-branch-to-stable">Merge a Fix Branch to Stable</h6>
+<div class="paragraph">
+<p><strong>In exceptional circumstance</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>When:</strong> After SM test</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> SM Team</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout fix/4.1.x-issue
+git checkout stable/4.1.x
+git pull
+git merge fix/4.1.x-issue --squash
+git commit -a
+git push</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-remove-a-fix-branch-2">Remove a Fix Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> After the merge of the fix branch to stable branch</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> SM</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git push origin --delete fix/4.1.x-issue
+git branch -d fix/4.1.x-issue</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-perform-a-release">Perform a release</h6>
+<div class="paragraph">
+<p><strong>When:</strong> After FQA/TQA test campaign. VPs give a GO.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Release managers</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git clone git@github.com:exoplatform/xxx.git
+cd xxx
+# You checkout the release branch on which you need to perform a release.
+git checkout stable/A.B.x
+# You follow the classical maven release process
+mvn release:prepare
+mvn release:perform</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-move-a-release-tag">Move a release tag</h6>
+<div class="paragraph">
+<p><strong>In really special case</strong> (when the test campaign show a critical issue after tagging but before nexus publishing) release manager still can apply a last minute commit and move the tag.</p>
+</div>
+<div class="paragraph">
+<p><strong>When:</strong> After FQA/TQA test campaign. VPs give a GO.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> Release managers</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell"># After your commit, just delete the remote tag, and create another one in this way
+git tag -d 1.0.0
+git push origin :refs/tags/1.0.0
+git tag 1.0.0
+git push origin 1.0.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-integration-branch">1.3.7. Integration Branch</h4>
+<div class="paragraph">
+<p>Integration branches are dedicated branch to automatic integration task (like Crowdin translation for instance).</p>
+</div>
+<div id="git-workflow-integration-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-integration-branch.png"><img src="images/git-workflow-integration-branch.png" alt="Git Workflow - Integration Branch" width="800"></a>
+</div>
+<div class="title">Figure 7. Git Workflow - Integration Branch</div>
+</div>
+<div class="sect4">
+<h5 id="id-actions-4">1.3.7.1. Actions</h5>
+<div class="sect5">
+<h6 id="id-create-a-new-integration-branch">Create a new Integration Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> After a PLF release for Translation branches.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> SWF</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong> Create from develop or stable/4.1.x. These branches have no maven version updated.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-poc-branch">1.3.8. PoC Branch</h4>
+<div class="paragraph">
+<p><code>Engineering</code></p>
+</div>
+<div class="paragraph">
+<p>Poc branches are dedicated branch to develop a Prove of Concept (PoC).</p>
+</div>
+<div id="git-workflow-poc-branch" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/git-workflow-poc-branch.png"><img src="images/git-workflow-poc-branch.png" alt="Git Workflow - POC Branch" width="300"></a>
+</div>
+<div class="title">Figure 8. Git Workflow - POC Branch</div>
+</div>
+<div class="sect4">
+<h5 id="id-actions-5">1.3.8.1. Actions</h5>
+<div class="sect5">
+<h6 id="id-create-a-new-poc-branch">Create a new PoC Branch</h6>
+<div class="paragraph">
+<p><strong>When:</strong> A new PoC is planified.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> PL/TL</p>
+</div>
+<div class="paragraph">
+<p><strong>How:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ git checkout develop
+$ git pull
+$ git checkout -b poc/x
+[Modify all pom: initial commit]
+$ git add pom.xml
+$ git commit -m "details"
+$ git push</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-release-process">1.3.9. Release Process</h4>
+<div class="paragraph">
+<p>A release must never involve a freeze of the develop branch.
+This section explain the release process to follow when doing an intermediate release (Milestone, Release Candidate) or the final release.</p>
+</div>
+<div class="sect4">
+<h5 id="id-intermediate-release">1.3.9.1. Intermediate Release</h5>
+<div class="paragraph">
+<p><strong>When:</strong> Product Leader give a go to do an intermediate release of PLF (Milestone, Release Candidate)</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> PLF Team with support of team responsible of each project</p>
+</div>
+<div id="release-intermediate" class="imageblock" style="text-align: center">
+<div class="content">
+<a class="image" href="images/release-prepare-intermediate.png"><img src="images/release-prepare-intermediate.png" alt="Intermediate Release" width="600"></a>
+</div>
+<div class="title">Figure 9. Intermediate Release</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-final-release">1.3.9.2. Final Release</h5>
+<div class="paragraph">
+<p><strong>When:</strong> Product Leader give a go to do the final release of PLF</p>
+</div>
+<div class="paragraph">
+<p><strong>Who:</strong> PLF Team with support of team responsible of each project</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/release-prepare-final.png" alt="Final Release process" width="500" height=")">
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-community-contributions">1.3.10. Community Contributions</h4>
+<div class="paragraph">
+<p>Anyone with a Github account can contribute to eXo Platform.
+The only difference for people outside of the eXo Platform organization is they must sign a <a href="../resources/sources/eXo_Platform_ContributorAgreement_EN_v1.2.pdf">Contribution License Agreement</a>.
+The Contributor License Agreement is needed to clarify the terms of usage of contributions by eXo Platform and the entire open source community.</p>
+</div>
+<div class="paragraph">
+<p>The CLA must be printed, signed, then scanned as a PDF file and sent at <a href="mailto:cla@exoplatform.com">cla@exoplatform.com</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-improvement">1.3.11. Improvement</h4>
+<div class="sect4">
+<h5 id="id-what-is-changing-compare-to-4-1">1.3.11.1. What is changing compare to 4.1</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Clean history by using git rebase.</p>
+</li>
+<li>
+<p>No more weekly merge between develop and master.</p>
+</li>
+<li>
+<p>All fixes are push firstly to develop branch. Then SM backport what they need to stable.</p>
+</li>
+<li>
+<p>Rebase develop to feature branch:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To do it regularly</p>
+</li>
+<li>
+<p>To do it ONLY if develop branch is ok : build + acceptance are ok otherwise you&#8217;ll distribute shitty code everywhere</p>
+</li>
+<li>
+<p>To do it for all projects in a given FB at the same time (to keep the coherency)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>No more master branch on exodev repository. Master is only on blessed repository.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="id-git-cheat-sheet">1.4. Git - Cheat Sheet</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/git-overview.png" alt="Git Big Picture" width=")">
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-features">1.4.1. Features</h4>
+<div class="sect4">
+<h5 id="id-create">1.4.1.1. Create</h5>
+<div class="paragraph">
+<p><strong>From existing data</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">cd  &lt;DIRECTORY&gt;
+git init
+git add .
+git commit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>From existing repo</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git clone &lt;EXISTING_REPO&gt; &lt;NEW_REPO&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>default protocol is ssh
+EXISTING_REPO is a local path or a remote URL, for examples :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>path</em> : ~/repository.git</p>
+</li>
+<li>
+<p><em>ssh</em> : git@host:repository.git</p>
+</li>
+<li>
+<p><em>http(s)</em> : <a href="https://username@host/repository.git" class="bare">username@host/repository.git</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-update">1.4.1.2. Update</h5>
+<div class="paragraph">
+<p><strong>Fetch latest changes from origin</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git fetch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>this does not merge them</p>
+</div>
+<div class="paragraph">
+<p><strong>Pull latest changes from origin</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git pull</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>does a fetch followed by a merge</p>
+</div>
+<div class="paragraph">
+<p>In case of conflict, resolve the conflict and</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git am —resolve</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-track-files">1.4.1.3. Track Files</h5>
+<div class="paragraph">
+<p><strong>Start tracking files</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git add &lt;FILES&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Interactive selection of files to track</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git add -i</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Move/Rename a file</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git mv &lt;OLD_NAME&gt; &lt;NEW_NAME&gt;
+git mv &lt;OLD_PATH&gt; &lt;NEW_PATH&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Stop tracking and delete files in working directories</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git rm &lt;FILES&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Stop tracking but keep files in working directory</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git rm —cached &lt;FILES&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="commit">1.4.1.4. Commit</h5>
+<div class="paragraph">
+<p><strong>Commit all local changes</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git commit -a +</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Commit messages</strong></p>
+</div>
+<div class="paragraph">
+<p>Commits must relate to a JIRA issue.
+Convention for messages inspired by <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">this article</a> :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The first line must be short (50 chars or less) and auto-descriptive
+in a format " ", for example <code>AM-101 : Fix the behavior of archives download</code></p>
+</li>
+<li>
+<p>Write your commit message in the present tense: <code>Fix bug</code> and not <code>Fixed bug</code>.</p>
+</li>
+<li>
+<p>The second line is blank.</p>
+</li>
+<li>
+<p>Next lines optionally define a short summary of changes (wrap them to about 72 chars or so).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">AM-101 : Fix the behavior of archives download
+
+* —no-cache has no effect on it
+* The add-ons manager always retry to download the archive from the
+downloadUrl. The download is skipped if the local file exists, it has
+the same size as the remote one and its modifiedDate is &gt; to the remote
+one (It will allow to install new SNAPSHOTs without enforcing to
+download the archive each time)
+* The same behavior is applied for all URLs (http(s), file) +</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-publish">1.4.1.5. Publish</h5>
+<div class="paragraph">
+<p><strong>Prepare a patch for other developers</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git format-patch origin</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Push changes to origin</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git push origin &lt;BRANCH&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use option <code>--all</code> to push all local references (branches, tags..), <code>--tags</code> to push all tags,
+<code>--force</code> to push non fast-forward changes (must be avoided to not risk to loose commits)</p>
+</div>
+<div class="paragraph">
+<p><strong>Make a version or milestone</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git tag &lt;TAG_NAME&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-branch">1.4.1.6. Branch</h5>
+<div class="paragraph">
+<p><strong>List all branches</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git branch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Switch to the BRANCH branch</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout &lt;BRANCH&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Merge branch B1 into branch B2</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout &lt;B2&gt;
+git merge &lt;B1&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Create branch based on HEAD</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git branch &lt;BRANCH&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Create branch based on another</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git branch &lt;NEW&gt; &lt;BASE&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Delete a local branch</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git branch -d &lt;BRANCH&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Delete a remote branch</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git push &lt;origin&gt; :&lt;BRANCH&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-remote">1.4.1.7. Remote</h5>
+<div class="paragraph">
+<p><strong>List all your remote repositories</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ git remote -v
+origin git@github.com:exodev/platform (fetch)
+origin git@github.com:exodev/platform (push)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Add a new remote repository</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git remote add upstream git@github.com:exoplatform/platform.git</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Rename a remote repository</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git remote rename upstream foo</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Delete a remote repository</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git remote rm upstream foo</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-browse">1.4.1.8. Browse</h5>
+<div class="paragraph">
+<p><strong>Files changed in working directory</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Changes to tracked files</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git diff</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Changes between ID1 and ID2</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git diff &lt;ID1&gt; &lt;ID2&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>History of changes</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git log</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Who changed what and when in a file</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git blame &lt;FILE&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>A commit identified by ID</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git show &lt;ID&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>A specific file from a specific ID</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git diff &lt;ID&gt;:&lt;FILE&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Search for patterns</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git grep &lt;PATTERN&gt; &lt;PATH&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-revert">1.4.1.9. Revert</h5>
+<div class="paragraph">
+<p><strong>Return to the last committed state</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout -f | git reset —hard</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>you cannot undo a hard reset</p>
+</div>
+<div class="paragraph">
+<p><strong>Revert the last commit</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git revert HEAD</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Creates a new commit</p>
+</div>
+<div class="paragraph">
+<p><strong>Revert specific commit</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git revert &lt;ID&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Creates a new commit</p>
+</div>
+<div class="paragraph">
+<p><strong>Fix the last commit</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git commit -a —amend</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>after editing the broken files</p>
+</div>
+<div class="paragraph">
+<p><strong>Checkout the ID version of a file</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git checkout &lt;ID&gt; &lt;FILE&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Restoring lost commits</strong></p>
+</div>
+<div class="paragraph">
+<p>So, you just did a <code>git reset --hard HEAD^</code> and threw out your last
+commit. Well, it turns out you really did need those changes. You’ll
+never be able to implement that algorithm that perfectly twice, so you
+need it back. Don’t fear, git should still have your commit. When you do
+a reset, the commit you threw out goes to a <code>dangling</code> state. It’s
+still in git’s datastore, waiting for the next garbage collection to
+clean it up. So unless you’ve ran a <code>git gc</code> since you tossed it, you
+should be in the clear to restore it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git cherry-pick ORIG_HEAD</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>HEAD vs ORIG_HEAD</strong></p>
+</div>
+<div class="paragraph">
+<p><code>ORIG_HEAD</code> is previous state of <code>HEAD</code>, set by commands that have
+possibly dangerous behavior, to be easy to revert them. It is less
+useful now that Git has reflog: <code>HEAD&#64;{1}</code> is roughly equivalent to
+<code>ORIG_HEAD</code> (<code>HEAD&#64;{1}</code> is always last value of <code>HEAD</code>, <code>ORIG_HEAD</code>
+is last value of <code>HEAD</code> before dangerous operation).</p>
+</div>
+<div class="paragraph">
+<p><strong>Removing a File from Every Commit (Powerful filter-branch)</strong></p>
+</div>
+<div class="paragraph">
+<p>This occurs fairly commonly. Someone accidentally commits a huge binary
+file with a thoughtless <code>git add .</code>, and you want to remove it
+everywhere. Perhaps you accidentally committed a file that contained a
+password, and you want to make your project open source. filter-branch
+is the tool you probably want to use to scrub your entire history. To
+remove a file named passwords.txt from your entire history, you can use
+the <code>--tree-filter</code> option to <code>filter-branch</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git filter-branch —tree-filter 'rm -f passwords.txt' HEAD</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>--tree-filter</code> option runs the specified command after each
+checkout of the project and then recommits the results. In this case,
+you remove a file called passwords.txt from every snapshot, whether it
+exists or not. If you want to remove all accidentally committed editor
+backup files, you can run something like
+<code>git filter-branch --tree-filter 'rm -f *~' HEAD</code>.
+Using <code>--index-filter</code> with <code>git rm</code> yields a significantly faster
+version. Like with using <code>rm filename</code>, <code>git rm --cached filename</code> will
+fail if the file is absent from the tree of a commit. If you want to
+<code>completely forget</code> a file, it does not matter when it entered
+history, so we also add <code>--ignore-unmatch</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">git filter-branch —index-filter 'git rm —cached —ignore-unmatch passwords.txt' HEAD</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-sources">1.4.2. Sources</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/AlexZeitler/gitcheatsheet">Alex Zeitler Git cheat sheet</a></p>
+</li>
+<li>
+<p><a href="http://jan-krueger.net/git">Jan Krueger Git cheat sheet</a></p>
+</li>
+<li>
+<p><a href="http://gitready.com/">Git Ready</a></p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/964876/head-and-orig-head-in-git">Stackoverflow - HEAD and ORIG_HEAD in Git</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="id-ide-settings-to-work-on-exo-platform-projects">2. IDE Settings to work on eXo Platform projects</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="id-eclipse-settings">2.1. Eclipse - Settings</h3>
+<div class="paragraph">
+<p>Eclipse settings are available in <a href="https://github.com/exoplatform/developer.exoplatform.org/tree/master/resources/ide/eclipse/">/resources/ide/eclipse</a>.</p>
+</div>
+<div class="paragraph">
+<p>Configure Eclipse at "Window" &#8594; "Preferences…"</p>
+</div>
+<div class="sect3">
+<h4 id="id-clean-up-settings">2.1.1. Clean Up Settings:</h4>
+<div class="paragraph">
+<p>Java &#8594; Code Style &#8594; Clean Up</p>
+</div>
+<div class="paragraph">
+<p>Choose: "Import…" <a href="../resources/ide/eclipse/exo-Java-CodeStyle-CleanUp.xml">exo-Java-CodeStyle-CleanUp.xml</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eclipse-Java-CodeStyle-CleanUp.png" alt="Eclipse Clean Up Settings" width=")">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-code-templates-settings">2.1.2. Code Templates Settings:</h4>
+<div class="paragraph">
+<p>Java &#8594; Code Style &#8594; Code Templates</p>
+</div>
+<div class="paragraph">
+<p>Choose: "Import…" <a href="../resources/ide/eclipse/exo-Java-CodeStyle-CodeTemplates.xml">exo-Java-CodeStyle-CodeTemplates.xml</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eclipse-Java-CodeStyle-CodeTemplates.png" alt="Eclipse Code Style Settings" width=")">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-formatter-settings">2.1.3. Formatter Settings:</h4>
+<div class="paragraph">
+<p>Java &#8594; Code Style &#8594; Formatter</p>
+</div>
+<div class="paragraph">
+<p>Choose: "Import…" <a href="../resources/ide/eclipse/exo-Java-CodeStyle-Formatter.xml">exo-Java-CodeStyle-Formatter.xml</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eclipse-Java-CodeStyle-Formatter.png" alt="Eclipse Formatter Cleanup" width=")">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-organize-imports-settings">2.1.4. Organize Imports Settings:</h4>
+<div class="paragraph">
+<p>Java &#8594; Code Style &#8594; Organize Imports</p>
+</div>
+<div class="paragraph">
+<p>Choose: "Import…" <a href="../resources/ide/eclipse/exo-Java-CodeStyle-OrganizeImports.importorder">exo-Java-CodeStyle-OrganizeImports.importorder</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eclipse-Java-CodeStyle-OrganizeImports.png" alt="Eclipse Organize Imports Settings" width=")">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="id-intellij-settings">2.2. IntelliJ - Settings</h3>
+<div class="paragraph">
+<p>Intellij IDEA users must install the plugin <a href="http://plugins.jetbrains.com/plugin/?id=6546">Eclipse Code Formatter</a> and import Eclipse settings files from <a href="https://github.com/exoplatform/developer.exoplatform.org/tree/master/resources/ide/eclipse/">/resources/ide/eclipse</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a specific profile (ex: "eXo")</p>
+</li>
+<li>
+<p>Use the file <a href="../resources/ide/eclipse/exo-Java-CodeStyle-Formatter.xml">exo-Java-CodeStyle-Formatter.xml</a> for "Eclipse Java Formatter config file"</p>
+</li>
+<li>
+<p>Use the file <a href="../resources/ide/eclipse/exo-Java-CodeStyle-OrganizeImports.importorder">exo-Java-CodeStyle-OrganizeImports.importorder</a> for "Optimize Imports from file"</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/intellij-eclipse-code-formatter.png" alt="IntelliJ Eclipse Code Formatter">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="id-build-management">3. Build Management</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="id-maven-setup-guide">3.1. Maven - Setup guide</h3>
+<div class="sect3">
+<h4 id="id-prerequisites">3.1.1. Prerequisites</h4>
+<div class="paragraph">
+<p>To build eXo projects you need to install a Java <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a> 6, 7 or 8 depending of the Platform version you are targeting :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Platform 4.4+ : Java 8</p>
+</li>
+<li>
+<p>Platform 4.1 / 4.2 / 4.3 : Java 7</p>
+</li>
+<li>
+<p>Platform 4.0.x : Java 6</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-install-apache-maven">3.1.2. Install Apache Maven</h4>
+<div class="paragraph">
+<p>The version <strong>3.2.3</strong> of <a href="http://maven.apache.org/download.cgi">Apache Maven</a> is currently recommended to build eXo projects.<br></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<em>The minimal version required is 3.0.4.<br>
+The version 3.2.2 must be avoided due to <a href="https://jira.codehaus.org/browse/MNG-5663">MNG-5663</a>.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download a fresh and clean copy of <a href="http://maven.apache.org/download.cgi">Apache Maven</a>. It is critical to take a fresh copy to be sure that the file <code>apache-maven-X.Y.Z/conf/settings.xml</code> isn&#8217;t modified !!</p>
+</li>
+<li>
+<p>Unzip the distribution archive, i.e. apache-maven-X.Y.Z-bin.(zip|tar.gz) to the directory you wish to install Maven. The subdirectory <code>apache-maven-X.Y.Z</code> will be created from the archive. It is recommended to not store it under a path with spaces.</p>
+</li>
+<li>
+<p>Add the path of <code>apache-maven-X.Y.Z/bin</code> in your <code>PATH</code> environment variable.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On Windows use the preferences screen of "Environment Variables"</p>
+</li>
+<li>
+<p>On Linux/MacOS export the variable PATH from a startup script like .bash_profile (it depends of the OS and the shell you are using)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add a system environment variable <code>MAVEN_OPTS</code> (it could be in a .profile startup script on Linux/MacOS operating systems or in the global environment variables panel on Windows)with the value <code>-Xshare:auto -Xms128M -Xmx1G -XX:MaxPermSize=256M</code></p>
+</li>
+<li>
+<p>Run <code>mvn --version</code> to verify that it is correctly installed.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Additional documentations</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.sonatype.com/books/mvnref-book/reference/installation.html">Maven: The Complete Reference - Chapter 2. Installing Maven</a></p>
+</li>
+<li>
+<p><a href="http://maven.apache.org/download.html">Maven website - Installing Maven</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Maven and MacOSX</div>
+<div class="paragraph">
+<p>Apple provides for several years now, Maven as a standard tool in MacOSX distributions.
+You can see the version provided with <code>mvn --version</code>.
+You can find where the mvn script is located with which mvn (in theory in /usr/bin).
+It recommended to deactivate the one provided with MacOS X to use the one you&#8217;ll define yourself.
+Take care if you upgrade your system, because Apple can restore the default version on your system.
+To deactivate the Maven version bundled in OSX, just remove the symlink : <code>sudo rm /usr/bin/mvn</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id-configure-apache-maven">3.1.3. Configure Apache Maven</h4>
+<div class="sect4">
+<h5 id="id-basic-setup">3.1.3.1. Basic setup</h5>
+<div class="paragraph">
+<p>Since Platform 4, no specific settings are required to build eXo public projects. Just clone any project and launch <code>mvn install</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id-advanced-setup">3.1.3.2. Advanced setup</h5>
+<div class="paragraph">
+<p>If you need to release a project or to build a project relying on private or staging binaries you&#8217;ll need to customize your maven settings.</p>
+</div>
+<div class="paragraph">
+<p>Using <a href="../resources/build/maven/settings.xml">our template</a> create a file <code>settings.xml</code> in your <code>home directory</code> under a directory called <code>.m2</code> (if you already launched maven this directory must already exist and it should contain a subdirectory <code>repository</code> where Maven stores all artifacts it processes).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;settings
+  xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+  &lt;servers&gt;
+    &lt;!-- eXo Platform credentials --&gt;
+    &lt;!-- Used to upload binaries on repository.exoplatform.org --&gt;
+    &lt;server&gt;
+      &lt;id&gt;repository.exoplatform.org&lt;/id&gt;
+      &lt;username&gt;&lt;!-- Your eXo LDAP/Crowd Identifier --&gt;&lt;/username&gt;
+      &lt;password&gt;&lt;!-- Your eXo LDAP/Crowd Password --&gt;&lt;/password&gt;
+    &lt;/server&gt;
+    &lt;!-- Used to download private binaries from repository.exoplatform.org --&gt;
+    &lt;server&gt;
+      &lt;id&gt;exo.private&lt;/id&gt;
+      &lt;username&gt;&lt;!-- Your eXo LDAP/Crowd Identifier --&gt;&lt;/username&gt;
+      &lt;password&gt;&lt;!-- Your eXo LDAP/Crowd Password --&gt;&lt;/password&gt;
+    &lt;/server&gt;
+    &lt;!-- Used to download staging binaries from repository.exoplatform.org --&gt;
+    &lt;server&gt;
+      &lt;id&gt;exo.staging&lt;/id&gt;
+      &lt;username&gt;&lt;!-- Your eXo LDAP/Crowd Identifier --&gt;&lt;/username&gt;
+      &lt;password&gt;&lt;!-- Your eXo LDAP/Crowd Password --&gt;&lt;/password&gt;
+    &lt;/server&gt;
+    &lt;!-- Used to download custom projects binaries from repository.exoplatform.org --&gt;
+    &lt;server&gt;
+      &lt;id&gt;exo.cp&lt;/id&gt;
+      &lt;username&gt;&lt;!-- Your eXo LDAP/Crowd Identifier --&gt;&lt;/username&gt;
+      &lt;password&gt;&lt;!-- Your eXo LDAP/Crowd Password --&gt;&lt;/password&gt;
+    &lt;/server&gt;
+    &lt;!-- Used to release projects on repository.jboss.org --&gt;
+     &lt;server&gt;
+      &lt;id&gt;jboss-releases-repository&lt;/id&gt;
+      &lt;username&gt;&lt;!-- Your JBoss.org Identifier --&gt;&lt;/username&gt;
+      &lt;password&gt;&lt;!-- Your JBoss.org Password --&gt;&lt;/password&gt;
+    &lt;/server&gt;
+  &lt;/servers&gt;
+  &lt;mirrors&gt;
+    &lt;mirror&gt;
+      &lt;id&gt;exo-mirror&lt;/id&gt;
+      &lt;mirrorOf&gt;external:*,!exo.private,!exo.cp,!exo.staging&lt;/mirrorOf&gt;
+      &lt;url&gt;https://repository.exoplatform.org/public&lt;/url&gt;
+    &lt;/mirror&gt;
+  &lt;/mirrors&gt;
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;exo-central&lt;/id&gt;
+      &lt;!-- This "hack" change the behavior of maven to let it use our public mirror
+      as the central repository (with snapshots activation).
+      The URL is never used and is overrided by the mirror entry.
+      --&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;central&lt;/id&gt;
+          &lt;url&gt;http://fake&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;central&lt;/id&gt;
+          &lt;url&gt;http://fake&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+    &lt;!-- Specific settings used while releasing a project --&gt;
+    &lt;profile&gt;
+      &lt;id&gt;exo-release&lt;/id&gt;
+      &lt;properties&gt;
+        &lt;gpg.keyname&gt;&lt;!-- The GPG Key to use to sign eXo releases --&gt;&lt;/gpg.keyname&gt;
+        &lt;gpg.passphrase&gt;&lt;!-- The passphrase of your GPG Key --&gt;&lt;/gpg.passphrase&gt;
+      &lt;/properties&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+      &lt;id&gt;exo-private&lt;/id&gt;
+      &lt;!-- Repositories to download eXo private binaries --&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;exo.private&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/private&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;exo.private&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/private&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+      &lt;!-- Repositories to download eXo custom projects binaries and products patchs --&gt;
+      &lt;id&gt;exo-cp&lt;/id&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;exo.cp&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/cp&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;exo.cp&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/cp&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+      &lt;id&gt;exo-staging&lt;/id&gt;
+      &lt;!-- Repositories to download eXo staging binairies --&gt;
+      &lt;!-- TAKE CARE TO ACTIVATE IT ONLY IF REQUIRED --&gt;
+      &lt;!-- These repositories are delivering binaries marked as released but allowed to be replaced --&gt;
+      &lt;!-- Maven never updates released binaries thus you have to cleanup your local repository to grab an updated version --&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;exo.staging&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/staging&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;exo.staging&lt;/id&gt;
+          &lt;url&gt;https://repository.exoplatform.org/staging&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+      &lt;id&gt;jboss-staging&lt;/id&gt;
+      &lt;!-- Repositories to download JBoss staging binairies --&gt;
+      &lt;!-- TAKE CARE TO ACTIVATE IT ONLY IF REQUIRED --&gt;
+      &lt;!-- These repositories are delivering binaries marked as released but allowed to be replaced --&gt;
+      &lt;!-- Maven never updates released binaries thus you have to cleanup your local repository to grab an updated version --&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;jboss.staging&lt;/id&gt;
+          &lt;url&gt;https://repository.jboss.org/nexus/content/groups/staging/&lt;/url&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+      &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+          &lt;id&gt;jboss.staging&lt;/id&gt;
+          &lt;url&gt;https://repository.jboss.org/nexus/content/groups/staging/&lt;/url&gt;
+        &lt;/pluginRepository&gt;
+      &lt;/pluginRepositories&gt;
+    &lt;/profile&gt;
+    &lt;!-- This profile is always activated and let you define properties for dependent environment stuffs --&gt;
+    &lt;profile&gt;
+      &lt;id&gt;local-properties&lt;/id&gt;
+      &lt;properties&gt;
+        &lt;!--
+        &lt;exo.projects.directory.dependencies&gt;${user.home}/Applications&lt;/exo.projects.directory.dependencies&gt;
+        &lt;exo.projects.app.tomcat.version&gt;apache-tomcat-6.0.29&lt;/exo.projects.app.tomcat.version&gt;
+        &lt;exo.projects.app.jboss.version&gt;jboss-5.1.0.GA&lt;/exo.projects.app.jboss.version&gt;
+        --&gt;
+      &lt;/properties&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+  &lt;activeProfiles&gt;
+    &lt;!-- make these profiles active all the time --&gt;
+    &lt;activeProfile&gt;exo-central&lt;/activeProfile&gt;
+    &lt;activeProfile&gt;local-properties&lt;/activeProfile&gt;
+  &lt;/activeProfiles&gt;
+&lt;/settings&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the <code>~/.m2/settings.xml</code> configuration file you have to fill your credentials to access to protected binaries or to publish artifacts on repository.exoplatform.org. For a better security, you can encrypt passwords in your settings file, however you must first configure a master password. For more information on both server passwords and the master password, see the <a href="http://maven.apache.org/guides/mini/guide-encryption.html">Guide to password encryption</a> and the dedicated chapter in the <a href="http://www.sonatype.com/books/mvnref-book/reference/appendix-settings-sect-encrypting-passwords.html">Maven Reference Guide</a>. To release a project you have also to define the GPG key to use and its passphase (see <a href="#GPG">the GPG setup guide</a>).</p>
+</div>
+<div class="paragraph">
+<p>When your setup is done you can activate the following profiles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-Pexo-release</code> : Automatically activated while releasing projects. This profile is also activated on our CI server. Your GPG key must be configured (see <a href="#GPG">the GPG setup guide</a>).</p>
+</li>
+<li>
+<p><code>-Pexo-private</code> : To access to private binaries on repository.exoplatform.org (eXo employees only).</p>
+</li>
+<li>
+<p><code>-Pexo-staging</code> : To access to staging binaries (releases in validation) on repository.exoplatform.org (eXo employees only). <strong>TAKE CARE TO ACTIVATE IT ONLY IF REQUIRED.</strong> These repositories are delivering binaries considered by maven as released but allowed to be replaced. Maven never updates released binaries thus you have to cleanup your local repository to grab an updated version.</p>
+</li>
+<li>
+<p><code>-Pexo-cp</code> : To access to custom projects binaries on repository.exoplatform.org (eXo employees only).</p>
+</li>
+<li>
+<p><code>-Pjboss-staging</code> : To access to staging binaries on repository.jboss.org. <strong>TAKE CARE TO ACTIVATE IT ONLY IF REQUIRED.</strong> These repositories are delivering binaries considered by maven as released but allowed to be replaced. Maven never updates released binaries thus you have to cleanup your local repository to grab an updated version.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="GPG">3.1.3.3. Maven and GPG</h5>
+<div class="sect5">
+<h6 id="id-install-gnupg-for-your-os">Install gnupg for your OS.</h6>
+<div class="sect6">
+<h7 id="id-macos">MacOS</h7>
+<div class="paragraph">
+<p>For <a href="http://brew.sh/">homebrew</a> users :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">brew install gnupg</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For <a href="https://www.macports.org/">macport</a> users :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">sudo port install gnupg</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Others, you can use the <a href="http://macgpg.sourceforge.net/">native package</a>.</p>
+</div>
+</div>
+<div class="sect6">
+<h7 id="id-ubuntu">Ubuntu</h7>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">sudo aptitude install gnupg</code></pre>
+</div>
+</div>
+</div>
+<div class="sect6">
+<h7 id="id-windows">Windows</h7>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-validate-your-installation">Validate your installation</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ gpg --version
+gpg (GnuPG) 1.4.10
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later http://gnu.org/licenses/gpl.html[http://gnu.org/licenses/gpl.html]
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH, CAMELLIA128,
+ CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-generate-your-private-gpg-key">Generate your private GPG Key</h6>
+<div class="sect6">
+<h7 id="id-configure-gpg">Configure GPG</h7>
+<div class="paragraph">
+<p>Enforce the level of encryption. Edit <code>~/.gnupg/gpg.conf</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ vi .gnupg/gpg.conf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At the end of the file add :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">personal-digest-preferences SHA512
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed</code></pre>
+</div>
+</div>
+</div>
+<div class="sect6">
+<h7 id="id-generate-the-key">Generate the key</h7>
+<div class="paragraph">
+<p>Launch the key generation</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ gpg --gen-key</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>ALWAYS SELECT DEFAULT CHOICES AND DON&#8217;T USE AN EMPTY PASSPHRASE</strong></p>
+</div>
+<div class="paragraph">
+<p>Enter your personal information like here :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Real Name : Arnaud Héritier</p>
+</li>
+<li>
+<p>Comment : eXo Platform CODE SIGNING KEY</p>
+</li>
+<li>
+<p>Email Address : <a href="mailto:arnaud.heritier@exoplatform.com">arnaud.heritier@exoplatform.com</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Your key is created.</p>
+</div>
+<div class="paragraph">
+<p>You can list the key you just generated with :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ gpg --list-key
+pub 4096R/2CF0CC82 2009-11-17
+uid Arnaud Héritier (eXo Platform CODE SIGNING KEY) arnaud.heritier@exoplatform.com
+sub 4096R/37540EAE 2009-11-17</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You send your key to a PGP server (you use the ID from the "pub" line)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell" data-lang="shell">$ gpg --keyserver hkp://pgp.mit.edu[hkp://pgp.mit.edu] --send-keys 2CF0CC82</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your GPG key is now ready to be used</p>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-configure-your-gpg-key-for-maven">Configure your GPG Key for Maven</h6>
+<div class="paragraph">
+<p>Fill the GPG keyname and passphrase in the exo-release profile of your maven settings like described in <a href="#Advanced">Advanced settings</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml" data-lang="xml"> &lt;profile&gt;
+   &lt;id&gt;exo-release&lt;/id&gt;
+   &lt;properties&gt;
+     &lt;gpg.keyname&gt;2CF0CC82&lt;/gpg.keyname&gt;&lt;!-- This is the public ID is displayed with the gpg list-key command described above --&gt;
+     &lt;gpg.passphrase&gt;My awesome passphrase&lt;/gpg.passphrase&gt;
+   &lt;/properties&gt;
+ &lt;/profile&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-test-it">Test it</h6>
+<div class="paragraph">
+<p>Clone this project : <code>git@github.com:exodev/maven-sandbox-project.git</code></p>
+</div>
+<div class="paragraph">
+<p>Launch the command : <code>mvn install -Pexo-release</code></p>
+</div>
+<div class="paragraph">
+<p>You should see .asc files installed along others artifacts in the <code>target</code> directory of the project</p>
+</div>
+<div class="paragraph">
+<p>To end tests, try to release this project : <code>mvn release:prepare</code> followed by <code>mvn release:perform</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>You are ready. Your environment is setup to do a release with GPG signature.</strong></p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t forget to logon into <a href="https://repository.exoplatform.org">https://repository.exoplatform.org</a> and drop your staging repository</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="id-more-info">More info</h6>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.sonatype.com/people/2010/01/how-to-generate-pgp-signatures-with-maven/">http://www.sonatype.com/people/2010/01/how-to-generate-pgp-signatures-with-maven/</a></p>
+</li>
+<li>
+<p><a href="http://www.apache.org/dev/release-signing.html">http://www.apache.org/dev/release-signing.html</a></p>
+</li>
+<li>
+<p><a href="http://www.apache.org/dev/publishing-maven-artifacts.html#gpg">http://www.apache.org/dev/publishing-maven-artifacts.html#gpg</a></p>
+</li>
+<li>
+<p><a href="http://maven.apache.org/plugins/maven-gpg-plugin">http://maven.apache.org/plugins/maven-gpg-plugin</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>
